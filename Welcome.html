@@ -3,88 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Tutoring Academy</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .header .logo {
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .header .navigation a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #007BFF;
-            font-weight: bold;
-        }
-        .main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100vh - 80px); /* Subtract header height */
-            padding: 20px;
-        }
-        .main .content {
-            display: flex;
-            align-items: center;
-            max-width: 1000px;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .main .illustration {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .main .illustration img {
-            max-width: 100%;
-            height: auto;
-        }
-        .main .text {
-            flex: 1;
-            text-align: left;
-        }
-        .main .text h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .main .text p {
-            color: #555;
-            line-height: 1.6;
-        }
-    </style>
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Nexus Tutoring Academy</div>
-        <div class="navigation">
-            <a href="#apply">Apply to Tutor</a>
-            <a href="#signin">Sign In</a>
-            <a href="#signup">register/student</a>
+    <div class="calendar">
+        <div class="header">
+            <button id="prevMonth">❮</button>
+            <span id="monthYear"></span>
+            <button id="nextMonth">❯</button>
         </div>
-    </div>
-    <div class="main">
-        <div class="content">
-            <div class="illustration">
-                <img src="https://img.freepik.com/free-vector/digital-learning-abstract-concept-vector-illustration-digital-distance-education-elearning-flipped-smart-classroom-training-courses-online-teaching-video-call-home-office-abstract-metaphor_335657-5860.jpg?t=st=1724874252~exp=1724877852~hmac=3f00d5a78759991f16d2e57a6bf33586286649e6c665712e8a6a3a886b73eebe&w=740" alt="Online Learning Illustration">
-            </div>
-            <div class="text">
-                <h1>Online Learning, Personalized for You</h1>
-                <p>Whether you need help with homework or exam preparation, we are here to guide you every step of the way. Join us to unlock your full potential and achieve academic success from the comfort of your home.</p>
-            </div>
-        </div>
-    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody id="calendarBody"></tbody>
+        </table>
+
+    <script src="script.js"></script>
 </body>
 </html>
